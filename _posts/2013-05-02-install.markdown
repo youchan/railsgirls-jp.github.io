@@ -78,13 +78,6 @@ source ~/.bash_profile
 rbenv install 2.2.3
 {% endhighlight %}
 
-※もしも "OpenSSL::SSL::SSLError: ... : certificate verify failed" エラーが起きた場合は、以下の手順を試してみてください。
-
-{% highlight sh %}
-brew install curl-ca-bundle
-cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'`
-{% endhighlight %}
-
 #### 3-A-5. デフォルトのRuby を設定:
 
 {% highlight sh %}
